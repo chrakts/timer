@@ -11,10 +11,10 @@ void init_mytimer(void)
 		;// Wait until RTC is not busy.
 	} while ( RTC.STATUS & RTC_SYNCBUSY_bm );
 
-	RTC.PER = 8;
+	RTC.PER = 16;
 	RTC.CNT = 0;
 	RTC.COMP = 0;
-	RTC.CTRL = RTC_PRESCALER_DIV1_gc;
+	RTC.CTRL = RTC_PRESCALER_DIV16_gc;
 	RTC.INTCTRL	= RTC_OVFINTLVL_MED_gc;
 }
 

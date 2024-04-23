@@ -1,8 +1,6 @@
 #include "timer.h"
 #include "myTimers.h"
 
-
-
 void init_mytimer(void)
 {
 	CLK.RTCCTRL = CLK_RTCSRC_RCOSC32_gc | CLK_RTCEN_bm;
